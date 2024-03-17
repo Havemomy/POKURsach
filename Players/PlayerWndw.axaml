@@ -1,0 +1,34 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Kursach.Players.PlayerWndw">
+        <Grid>
+                <Button Name="AddPlayerBtn" Background="Lavender" VerticalAlignment="Top" Margin="80 0 0 0" Click="AddPlayerBtn_OnClick">
+                        <StackPanel>
+                                <TextBlock Text="Add player" FontWeight="ExtraLight" HorizontalAlignment="Center" FontSize="20"/>
+                        </StackPanel>
+                </Button>
+                <Button Name="DeletePlayerBtn" Background="Lavender" VerticalAlignment="Top" Margin="113 0 0 0" Click="DeletePlayerBtn_OnClick">
+                        <StackPanel>
+                                <TextBlock Text="Delete" FontWeight="ExtraLight" HorizontalAlignment="Center" FontSize="20"/>
+                        </StackPanel>
+                </Button>
+                <Button Name="EditPlayerBtn" Background="Lavender" VerticalAlignment="Top" Margin="145 0 0 0" Click="EditPlayerBtn_OnClick">
+                        <StackPanel>
+                                <TextBlock Text="Edit" FontWeight="ExtraLight" HorizontalAlignment="Center" FontSize="20"/>
+                        </StackPanel>
+                </Button>
+                <DataGrid Name="PlayersGrid" x:CompileBindings="False" VerticalAlignment="Top" HorizontalAlignment="Center" BorderBrush="LightSteelBlue" BorderThickness="5" Margin="0 30 0 0">
+                        <DataGrid.Columns>
+                                <DataGridTextColumn Header="ID" Binding="{Binding ClientID}"/>
+                                <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                                <DataGridTextColumn Header="Nickname" Binding="{Binding Nickname}"/>
+                                <DataGridTextColumn Header="SecondName" Binding="{Binding SecondName}"/>
+                                <DataGridTextColumn Header="Nation" Binding="{Binding Nation}"/>
+                                <DataGridTextColumn Header="DateOfBirth" Binding="{Binding DateOfBirth}"/>
+                        </DataGrid.Columns>
+                </DataGrid>
+        </Grid>
+</UserControl>
