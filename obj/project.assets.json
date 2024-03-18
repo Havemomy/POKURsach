@@ -5366,19 +5366,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vovan\\.nuget\\packages\\": {}
+    "/home/user/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vovan\\RiderProjects\\Kursach\\Kursach\\Kursach.csproj",
+      "projectUniqueName": "/home/user/RiderProjects/POKURsach/Kursach.csproj",
       "projectName": "Kursach",
-      "projectPath": "C:\\Users\\vovan\\RiderProjects\\Kursach\\Kursach\\Kursach.csproj",
-      "packagesPath": "C:\\Users\\vovan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vovan\\RiderProjects\\Kursach\\Kursach\\obj\\",
+      "projectPath": "/home/user/RiderProjects/POKURsach/Kursach.csproj",
+      "packagesPath": "/home/user/.nuget/packages/",
+      "outputPath": "/home/user/RiderProjects/POKURsach/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\vovan\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/user/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -5442,12 +5442,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.15, 7.0.15]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.linux-x64",
+            "version": "[7.0.15, 7.0.15]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.15, 7.0.15]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.101/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,4 +1,5 @@
-﻿using Avalonia;
+﻿using System;
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
@@ -25,14 +26,13 @@ public partial class AddPlayer : Window
         using (MySqlCommand command = new MySqlCommand(sql, _database.getConnection()))
         {
             command.Parameters.AddWithValue("@name", NameTxt.Text);
-            command.Parameters.AddWithValue("@nickname", SurnameTxt.Text);
-            command.Parameters.AddWithValue("@secondname", PhoneTxt.Text);
-            command.Parameters.AddWithValue("@nation", EmailTxt.Text);
+            command.Parameters.AddWithValue("@nickname", NickmaneTxt.Text);
+            command.Parameters.AddWithValue("@secondname", ScndTxt.Text);
+            int selectedNationId = GetSelectedStatusId(NationCmb.SelectedItem.ToString());
+            command.Parameters.AddWithValue("nation", selectedNationId);
             int selectedStatusId = GetSelectedStatusId(StatusCmb.SelectedItem.ToString());
             command.Parameters.AddWithValue("status", selectedStatusId);
             command.ExecuteNonQuery();
-            var box = MessageBoxManager.GetMessageBoxStandard("Успешно", "Успешно добавлен!", ButtonEnum.Ok);
-            var result = box.ShowAsync();
             this.Close();
         }
         _database.closeConnection();
@@ -40,7 +40,7 @@ public partial class AddPlayer : Window
     private void LoadDataStatusCmb()
     {
         _database.openConnection();
-        string sql = "select status_name from client_status;";
+        string sql = "select status_name from status;";
         MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
         using (MySqlDataReader reader = command.ExecuteReader())
         {
@@ -55,7 +55,7 @@ public partial class AddPlayer : Window
     private int GetSelectedStatusId(string selectedStatus)
     {
         _database.openConnection();
-        string sql = "select client_status_id from client_status where status_name = @selectedStatus";
+        string sql = "select client_status_id from client_status where status_name = @id";
         MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
         command.Parameters.AddWithValue("@selectedStatus", selectedStatus);
         int selectedId = Convert.ToInt32(command.ExecuteScalar());

@@ -13,22 +13,24 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Kursach
-build_property.ProjectDir = C:\Users\vovan\RiderProjects\Kursach\Kursach\
+build_property.ProjectDir = /home/user/RiderProjects/POKURsach/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[C:/Users/vovan/RiderProjects/Kursach/Kursach/App.axaml]
+[/home/user/RiderProjects/POKURsach/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/vovan/RiderProjects/Kursach/Kursach/MainWindow.axaml]
+[/home/user/RiderProjects/POKURsach/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/vovan/RiderProjects/Kursach/Kursach/Players/AddPlayer.axaml]
+[/home/user/RiderProjects/POKURsach/Players/AddPlayer.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/vovan/RiderProjects/Kursach/Kursach/Players/PlayerWndw.axaml]
+[/home/user/RiderProjects/POKURsach/Players/PlayerWndw.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/vovan/RiderProjects/Kursach/Kursach/Teams/TeamsWndw.axaml]
+[/home/user/RiderProjects/POKURsach/Teams/TeamsWndw.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/vovan/RiderProjects/Kursach/Kursach/TournamentsFinished/TournamWndw.axaml]
+[/home/user/RiderProjects/POKURsach/TournamentsFinished/TournamWndw.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
