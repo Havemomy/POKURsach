@@ -5,7 +5,7 @@ namespace Kursach;
 
 public class Database
 {
-    private MySqlConnection _connection = new MySqlConnection(@"server=localhost;database=crm;port=3306;User Id=user_01;password=user01pro*");
+    private MySqlConnection _connection = new MySqlConnection(@"server=localhost;database=Мара;port=3306;User Id=root;password=Password12");
     
     public void openConnection() 
     {

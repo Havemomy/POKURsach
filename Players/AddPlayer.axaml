@@ -13,7 +13,7 @@
                 <TextBlock Text="Secondn Name" FontWeight="DemiBold" HorizontalAlignment="Center"/>
                 <TextBox Name="ScndTxt"></TextBox>
                 <TextBlock Text="Nation" FontWeight="DemiBold" HorizontalAlignment="Center"/>
-                <ComboBox Name="NationCmb"></ComboBox>
+                <ComboBox Name="NationCmb" Width="150"></ComboBox>
                 <TextBlock Text="Status" FontWeight="DemiBold" HorizontalAlignment="Center"/>
                 <ComboBox Name="StatusCmb" Width="150"></ComboBox>
                 <Button Name="AddBtn" Content="Добавить" HorizontalAlignment="Center" Margin="0 5 0 0" Background="Lavender"  Click="AddBtn_OnClick"/>

@@ -1,9 +1,36 @@
-﻿<Window xmlns="https://github.com/avaloniaui"
+﻿<UserControl xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="Kursach.Teams.TeamsWndw"
-        Title="TeamsWndw">
-    Welcome to Avalonia!
-</Window>
+        x:Class="Kursach.Teams.TeamsWndw">
+        <Grid>
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <Button Name="AddPlayerBtn" Background="Black" VerticalAlignment="Top" Margin="10 0 0 0" Click="AddTeamBtn_OnClick">
+                        <StackPanel>
+                                <TextBlock Text="Add team" FontWeight="ExtraLight"  HorizontalAlignment="Center" FontSize="20"/>
+                        </StackPanel>
+                </Button>
+                <Button Name="DeletePlayerBtn" Background="Black" VerticalAlignment="Top" Margin="10 0 0 0"  Click="DeleteTeamBtn_OnClick">
+                        <StackPanel>
+                                <TextBlock Text="Delete" FontWeight="ExtraLight" HorizontalAlignment="Center" FontSize="20"/>
+                        </StackPanel>
+                </Button>
+                <Button Name="EditPlayerBtn" Background="Black" VerticalAlignment="Top" Margin="10 0 0 0" Click="EditTeamBtn_OnClick">
+                        <StackPanel>
+                                <TextBlock Text="Edit" FontWeight="ExtraLight" HorizontalAlignment="Center" FontSize="20"/>
+                        </StackPanel>
+                </Button>
+                </StackPanel>
+                <DataGrid IsReadOnly="True" Name="TeamGrid" Foreground="Black"  x:CompileBindings="False" VerticalAlignment="Top" HorizontalAlignment="Center" BorderBrush="Black" BorderThickness="5" Margin="0 30 0 0">
+                        <DataGrid.Columns>
+                                <DataGridTextColumn Header="ID" Binding="{Binding TeamId}"/>
+                                <DataGridTextColumn Header="TeamName" Binding="{Binding TeamName}"/>
+                                <DataGridTextColumn Header="Coach" Binding="{Binding Coach}"/>
+                                <DataGridTextColumn Header="Captain" Binding="{Binding Captain}"/>
+                                <DataGridTextColumn Header="Region" Binding="{Binding Region}"/>
+                        </DataGrid.Columns>
+                </DataGrid>
+        </Grid>
+    
+</UserControl>

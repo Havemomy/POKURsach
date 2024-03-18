@@ -4,6 +4,8 @@ build_property.AvaloniaNameGeneratorBehavior = InitializeComponent
 build_property.AvaloniaNameGeneratorDefaultFieldModifier = internal
 build_property.AvaloniaNameGeneratorFilterByPath = *
 build_property.AvaloniaNameGeneratorFilterByNamespace = *
+build_property.AvaloniaNameGeneratorViewFileNamingStrategy = NamespaceAndClassName
+build_property.AvaloniaNameGeneratorAttachDevTools = true
 build_property.TargetFramework = net7.0
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = 
@@ -13,24 +15,34 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Kursach
-build_property.ProjectDir = /home/user/RiderProjects/POKURsach/
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = C:\Users\vovan\RiderProjects\Kursach\Kursach\
 
-[/home/user/RiderProjects/POKURsach/App.axaml]
+[C:/Users/vovan/RiderProjects/Kursach/Kursach/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/user/RiderProjects/POKURsach/MainWindow.axaml]
+[C:/Users/vovan/RiderProjects/Kursach/Kursach/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/user/RiderProjects/POKURsach/Players/AddPlayer.axaml]
+[C:/Users/vovan/RiderProjects/Kursach/Kursach/Players/AddPlayer.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/user/RiderProjects/POKURsach/Players/PlayerWndw.axaml]
+[C:/Users/vovan/RiderProjects/Kursach/Kursach/Players/EditPlayerWndw.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/user/RiderProjects/POKURsach/Teams/TeamsWndw.axaml]
+[C:/Users/vovan/RiderProjects/Kursach/Kursach/Players/PlayerWndw.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/user/RiderProjects/POKURsach/TournamentsFinished/TournamWndw.axaml]
+[C:/Users/vovan/RiderProjects/Kursach/Kursach/Teams/AddTeam.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/vovan/RiderProjects/Kursach/Kursach/Teams/EditTeam.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/vovan/RiderProjects/Kursach/Kursach/Teams/EditTeamWndw.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/vovan/RiderProjects/Kursach/Kursach/Teams/TeamsWndw.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/vovan/RiderProjects/Kursach/Kursach/TournamentsFinished/TournamWndw.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

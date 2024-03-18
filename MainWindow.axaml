@@ -12,34 +12,34 @@
         CanResize="False">
         
         <Grid>
-                <Panel Name="MainPanel" Background="Lavender" HorizontalAlignment="Right" Width="840" Height="410" Margin="150 30 10 10">
+                <Panel Name="MainPanel" Background="WhiteSmoke" HorizontalAlignment="Right" Width="840" Height="410" Margin="150 30 10 10">
                         
                 </Panel>
                 <Panel Name="TitleBar" Width="1000" Height="30" VerticalAlignment="Top" HorizontalAlignment="Right">
                         <TextBlock Text="Takipedia" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" FontSize="30" FontWeight="ExtraLight" />
                 </Panel>
                 <Panel Name="Menu" Width="150" Height="420" HorizontalAlignment="Left" VerticalAlignment="Bottom">
-                        <Button Name="PlayersBtn" Background="White" VerticalAlignment="Top" Margin="0 20 0 0" Width="150" Click="PlayersBtn_OnClick" >
+                        <Button Name="PlayersBtn"  VerticalAlignment="Top" Margin="0 20 0 0" Width="150" Click="PlayersBtn_OnClick" >
                                 <StackPanel Orientation="Horizontal">
                                         <TextBlock Text="Players" FontWeight="ExtraLight" HorizontalAlignment="Center" FontSize="20"/>
                                 </StackPanel>
                         </Button>
-                        <Button Name="TeamsBtn" Background="White" VerticalAlignment="Top" Margin="0 60 0 0" Width="150" Click="TeamsBtn_OnClick">
+                        <Button Name="TeamsBtn"  VerticalAlignment="Top" Margin="0 60 0 0" Width="150" Click="TeamsBtn_OnClick">
                                 <StackPanel Orientation="Horizontal">
                                         <TextBlock Text="Teams" FontWeight="ExtraLight" HorizontalAlignment="Center" FontSize="20"/>
                                 </StackPanel>
                         </Button>
-                        <Button Name="TournamentsBtn" Background="White" VerticalAlignment="Top" Margin="0 100 0 0" Width="150" Click="TournamentsBtn_OnClick" >
+                        <Button Name="TournamentsBtn"  VerticalAlignment="Top" Margin="0 100 0 0" Width="150" Click="TournamentsBtn_OnClick" >
                                 <StackPanel Orientation="Horizontal">
                                         <TextBlock Text="Tournaments" FontWeight="ExtraLight" HorizontalAlignment="Center" FontSize="20"/>
                                 </StackPanel>
                         </Button>
-                        <Button Name="SuppBtn" Background="White" VerticalAlignment="Top" Margin="0 140 0 0" Width="150" >
+                        <Button Name="SuppBtn"  VerticalAlignment="Top" Margin="0 140 0 0" Width="150" >
                                 <StackPanel Orientation="Horizontal">
                                         <TextBlock Text="Support" FontWeight="ExtraLight" HorizontalAlignment="Center" FontSize="20"/>
                                 </StackPanel>
                         </Button>
-                        <Button Name="ExitBtn" Background="White" VerticalAlignment="Bottom" Margin="0 0 0 10" Width="150" Click="ExitBtn_OnClick" >
+                        <Button Name="ExitBtn"  VerticalAlignment="Bottom" Margin="0 0 0 10" Width="150" Click="ExitBtn_OnClick" >
                                 <StackPanel Orientation="Horizontal">
                                         <TextBlock Text="Exit" FontWeight="ExtraLight" HorizontalAlignment="Center" FontSize="20" />
                                 </StackPanel>

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/user/RiderProjects/POKURsach/Kursach.csproj": {}
+    "C:\\Users\\vovan\\RiderProjects\\Kursach\\Kursach\\Kursach.csproj": {}
   },
   "projects": {
-    "/home/user/RiderProjects/POKURsach/Kursach.csproj": {
+    "C:\\Users\\vovan\\RiderProjects\\Kursach\\Kursach\\Kursach.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/user/RiderProjects/POKURsach/Kursach.csproj",
+        "projectUniqueName": "C:\\Users\\vovan\\RiderProjects\\Kursach\\Kursach\\Kursach.csproj",
         "projectName": "Kursach",
-        "projectPath": "/home/user/RiderProjects/POKURsach/Kursach.csproj",
-        "packagesPath": "/home/user/.nuget/packages/",
-        "outputPath": "/home/user/RiderProjects/POKURsach/obj/",
+        "projectPath": "C:\\Users\\vovan\\RiderProjects\\Kursach\\Kursach\\Kursach.csproj",
+        "packagesPath": "C:\\Users\\vovan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vovan\\RiderProjects\\Kursach\\Kursach\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/user/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\vovan\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -40,27 +40,31 @@
           "dependencies": {
             "Avalonia": {
               "target": "Package",
-              "version": "[11.0.2, )"
+              "version": "[11.1.0-beta1, )"
             },
             "Avalonia.Controls.DataGrid": {
               "target": "Package",
-              "version": "[11.0.2, )"
+              "version": "[11.1.0-beta1, )"
             },
             "Avalonia.Desktop": {
               "target": "Package",
-              "version": "[11.0.2, )"
+              "version": "[11.1.0-beta1, )"
             },
             "Avalonia.Diagnostics": {
               "target": "Package",
-              "version": "[11.0.2, )"
+              "version": "[11.1.0-beta1, )"
             },
             "Avalonia.Fonts.Inter": {
               "target": "Package",
-              "version": "[11.0.2, )"
+              "version": "[11.1.0-beta1, )"
             },
             "Avalonia.Themes.Fluent": {
               "target": "Package",
-              "version": "[11.0.2, )"
+              "version": "[11.1.0-beta1, )"
+            },
+            "MessageBox.Avalonia": {
+              "target": "Package",
+              "version": "[3.1.5.1, )"
             },
             "MySql.Data": {
               "target": "Package",
@@ -78,26 +82,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[7.0.15, 7.0.15]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.linux-x64",
-              "version": "[7.0.15, 7.0.15]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[7.0.15, 7.0.15]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

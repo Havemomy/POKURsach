@@ -13,6 +13,7 @@ public partial class AddPlayer : Window
     public AddPlayer()
     {
         InitializeComponent();
+        LoadDataNationCmb();
         LoadDataStatusCmb();
         Width = 400;
         Height = 300;
@@ -28,10 +29,10 @@ public partial class AddPlayer : Window
             command.Parameters.AddWithValue("@name", NameTxt.Text);
             command.Parameters.AddWithValue("@nickname", NickmaneTxt.Text);
             command.Parameters.AddWithValue("@secondname", ScndTxt.Text);
-            int selectedNationId = GetSelectedStatusId(NationCmb.SelectedItem.ToString());
-            command.Parameters.AddWithValue("nation", selectedNationId);
+            int selectedNationId = GetSelectedNationId(NationCmb.SelectedItem.ToString());
+            command.Parameters.AddWithValue("@nation", selectedNationId);
             int selectedStatusId = GetSelectedStatusId(StatusCmb.SelectedItem.ToString());
-            command.Parameters.AddWithValue("status", selectedStatusId);
+            command.Parameters.AddWithValue("@status", selectedStatusId);
             command.ExecuteNonQuery();
             this.Close();
         }
@@ -40,13 +41,13 @@ public partial class AddPlayer : Window
     private void LoadDataStatusCmb()
     {
         _database.openConnection();
-        string sql = "select status_name from status;";
+        string sql = "select Name from status;";
         MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
         using (MySqlDataReader reader = command.ExecuteReader())
         {
             while (reader.Read())
             {
-                StatusCmb.Items.Add(reader["status_name"].ToString());
+                StatusCmb.Items.Add(reader["Name"].ToString());
             }
         }
         _database.closeConnection();
@@ -55,9 +56,33 @@ public partial class AddPlayer : Window
     private int GetSelectedStatusId(string selectedStatus)
     {
         _database.openConnection();
-        string sql = "select client_status_id from client_status where status_name = @id";
+        string sql = "select StatusID from status where Name = @selectedStatus";
         MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
         command.Parameters.AddWithValue("@selectedStatus", selectedStatus);
+        int selectedId = Convert.ToInt32(command.ExecuteScalar());
+        return selectedId;
+    }
+    private void LoadDataNationCmb()
+    {
+        _database.openConnection();
+        string sql = "select Name from nation;";
+        MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
+        using (MySqlDataReader reader = command.ExecuteReader())
+        {
+            while (reader.Read())
+            {
+                NationCmb.Items.Add(reader["Name"].ToString());
+            }
+        }
+        _database.closeConnection();
+    }
+
+    private int GetSelectedNationId(string selectedNation)
+    {
+        _database.openConnection();
+        string sql = "select NationID from nation where nation.name = @selectedNation";
+        MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
+        command.Parameters.AddWithValue("@selectedNation", selectedNation);
         int selectedId = Convert.ToInt32(command.ExecuteScalar());
         return selectedId;
     }
