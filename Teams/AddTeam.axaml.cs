@@ -1,6 +1,7 @@
 ﻿using System;
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Data;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using MySql.Data.MySqlClient;
@@ -28,7 +29,7 @@ public partial class AddTeam : Window
         {
             command.Parameters.AddWithValue("@teamname", TeamNameTxt.Text);
             command.Parameters.AddWithValue("@coach", CoachTxt.Text);
-            int selectedCaptainId = GetSelectedCaptainId(CaptainCmb.SelectedItem.ToString());
+            int selectedCaptainId = (int)CaptainCmb.SelectedValue;
             command.Parameters.AddWithValue("@captain", selectedCaptainId);
             int selectedRegionId = GetSelectedRegionId(RegionCmb.SelectedItem.ToString());
             command.Parameters.AddWithValue("@region", selectedRegionId);
@@ -41,14 +42,20 @@ public partial class AddTeam : Window
     private void LoadDataCaptainCmb()
     {
         _database.openConnection();
-        string sql = "select Nickname from players;";
+        string sql = "select Nickname, PlayerId from players;";
         MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
         using (MySqlDataReader reader = command.ExecuteReader())
         {
             while (reader.Read())
             {
-                CaptainCmb.Items.Add(reader["Nickname"].ToString());
+                var captain = new Players.Players();
+                captain.PlayerId = reader.GetInt32("PlayerId");
+                captain.Nickname = reader.GetString("Nickname");
+                CaptainCmb.Items.Add(captain);
             }
+
+            CaptainCmb.DisplayMemberBinding = new Binding("Nickname");
+            CaptainCmb.SelectedValueBinding = new Binding("PlayerId");
         }
         _database.closeConnection();
     }

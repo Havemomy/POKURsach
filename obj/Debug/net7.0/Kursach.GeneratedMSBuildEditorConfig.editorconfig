@@ -44,5 +44,11 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 [C:/Users/vovan/RiderProjects/Kursach/Kursach/Teams/TeamsWndw.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/vovan/RiderProjects/Kursach/Kursach/TournamentsFinished/AddTournament.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/vovan/RiderProjects/Kursach/Kursach/TournamentsFinished/EditTournamentWndw.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/vovan/RiderProjects/Kursach/Kursach/TournamentsFinished/TournamWndw.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

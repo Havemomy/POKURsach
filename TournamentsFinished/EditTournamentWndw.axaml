@@ -2,22 +2,22 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:players="clr-namespace:Kursach.Players"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="Kursach.Players.EditPlayerWndw"
-        Title="EditPlayer">
+        x:Class="Kursach.TournamentsFinished.EditTournamentWndw"
+        Title="EditTournament">
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                 <TextBlock Text="Name" FontWeight="DemiBold" HorizontalAlignment="Center"/>
                 <TextBox Name="NameTxt" Width="150"/>
-                <TextBlock Text="Nickname" FontWeight="DemiBold" HorizontalAlignment="Center"/>
-                <TextBox Name="NicknameTxt"></TextBox>
-                <TextBlock Text="SecondName" FontWeight="DemiBold" HorizontalAlignment="Center"/>
-                <TextBox Name="SecondNameTxt"></TextBox>
-                <TextBlock Text="Nation" FontWeight="DemiBold" HorizontalAlignment="Center"/>
-                <ComboBox Name="NationCmb" Width="150"/>
-                <TextBlock Text="Status" FontWeight="DemiBold" HorizontalAlignment="Center"/>
-                <ComboBox Name="StatusCmb" Width="150" />
+                <TextBlock Text="Organizer" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+                <TextBox Name="OrganizerTxt"></TextBox>
+                <TextBlock Text="Location" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+                <TextBox Name="LocationTxt"></TextBox>
+                <TextBlock Text="Type" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+                <ComboBox Name="TypeCmb" Width="150"/>
+                <TextBlock Text="Tier" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+                <ComboBox Name="TirerCmb" Width="150" />
                 
                 <Button Name="EditBtn" Content="Сохранить" HorizontalAlignment="Center" Margin="0 5 0 0" Background="Lavender" Click="EditBtn_OnClick"/>
         </StackPanel>
+    
 </Window>

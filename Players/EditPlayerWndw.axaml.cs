@@ -1,6 +1,7 @@
 ﻿using System;
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Data;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using MsBox.Avalonia;
@@ -39,7 +40,7 @@ public partial class EditPlayerWndw : Window
             command.Parameters.AddWithValue("@name", NameTxt.Text);
             command.Parameters.AddWithValue("@nickname", NicknameTxt.Text);
             command.Parameters.AddWithValue("@secondname", SecondNameTxt.Text);
-            command.Parameters.AddWithValue("@nation", GetSelectedNationId(NationCmb.SelectedItem.ToString()));
+            command.Parameters.AddWithValue("@nation", NationCmb.SelectedValue);
             command.Parameters.AddWithValue("@status", GetSelectedStatusId(StatusCmb.SelectedItem.ToString()));
             command.Parameters.AddWithValue("@id", id);
             command.ExecuteNonQuery();
@@ -47,24 +48,25 @@ public partial class EditPlayerWndw : Window
             var box = MessageBoxManager.GetMessageBoxStandard("Успешно", "Данные успешно изменены", ButtonEnum.Ok);
             var result = box.ShowAsync();
             this.Close();
-            PlayerWndw playerWndw = new PlayerWndw();
-            playerWndw.ShowTable(sql);
-            this.Close();
-        
     }
     private void LoadDataNationCmb()
     {
         _database.openConnection();
-        string sql = "select name from nation;";
+        string sql = "select name, NationId from nation;";
         MySqlCommand command = new MySqlCommand(sql, _database.getConnection());
         using (MySqlDataReader reader = command.ExecuteReader())
         {
             while (reader.Read())
             {
-                NationCmb.Items.Add(reader["name"].ToString());
+                var nation = new Nation();
+                nation.NationId = reader.GetInt32("NationId");
+                nation.Name = reader.GetString("Name");
+                NationCmb.Items.Add(nation);
             }
         }
         _database.closeConnection();
+        NationCmb.DisplayMemberBinding = new Binding("Name");
+        NationCmb.SelectedValueBinding = new Binding("NationId");
     }
     private int GetSelectedNationId(string selectedNation)
     {

@@ -1,0 +1,21 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Kursach.TournamentsFinished.AddTournament"
+        Title="AddTournament">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock Text="Name" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+                <TextBox Name="NameTxt" Width="150"/>
+                <TextBlock Text="Organizer" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+                <TextBox Name="OrgTxt"></TextBox>
+                <TextBlock Text="Location" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+                <TextBox Name="LocTxt"></TextBox>
+                <TextBlock Text="Type" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+                <ComboBox Name="TypeCmb" Width="150"></ComboBox>
+                <TextBlock Text="Tier" FontWeight="DemiBold" HorizontalAlignment="Center"/>
+                <ComboBox Name="TierCmb" Width="150"></ComboBox>
+                <Button Name="AddBtn" Content="Добавить" HorizontalAlignment="Center" Margin="0 5 0 0" Background="Lavender"  Click="AddBtn_OnClick"/>
+        </StackPanel>
+</Window>
